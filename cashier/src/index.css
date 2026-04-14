@@ -1,0 +1,75 @@
+/* cashier/src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg:           #090b10;
+    --surface:      #0f1117;
+    --surface2:     #13161e;
+    --surface3:     #1a1e28;
+    --border:       rgba(255,255,255,0.06);
+    --border-md:    rgba(255,255,255,0.10);
+    --text-1: rgba(255,255,255,0.87);
+    --text-2: rgba(255,255,255,0.50);
+    --text-3: rgba(255,255,255,0.28);
+    --text-4: rgba(255,255,255,0.12);
+    --accent:        #10b981;
+    --accent-hover:  #34d399;
+    --accent-fg:     #000;
+    --accent-soft:   rgba(16,185,129,0.12);
+    --accent-border: rgba(16,185,129,0.28);
+    --red:        #f87171;
+    --red-soft:   rgba(248,113,113,0.10);
+    --amber:      #fbbf24;
+  }
+
+  .light {
+    --bg:           #f4f5f9;
+    --surface:      #ffffff;
+    --surface2:     #f0f1f6;
+    --surface3:     #e6e8f0;
+    --border:       rgba(0,0,0,0.07);
+    --border-md:    rgba(0,0,0,0.11);
+    --text-1: rgba(0,0,0,0.85);
+    --text-2: rgba(0,0,0,0.50);
+    --text-3: rgba(0,0,0,0.32);
+    --text-4: rgba(0,0,0,0.14);
+    --accent:        #059669;
+    --accent-hover:  #047857;
+    --accent-fg:     #ffffff;
+    --accent-soft:   rgba(5,150,105,0.09);
+    --accent-border: rgba(5,150,105,0.25);
+    --red:        #dc2626;
+    --red-soft:   rgba(220,38,38,0.08);
+    --amber:      #d97706;
+  }
+
+  * { -webkit-user-select: none; user-select: none; }
+  input, textarea { -webkit-user-select: text; user-select: text; }
+
+  html, body, #root {
+    height: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text-1);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-md); border-radius: 2px; }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
